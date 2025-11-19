@@ -16,9 +16,9 @@ class: wide
 ---
 
 # How to Reduce 75% in AI Development Costs by Choosing the Right Optimizer
+-----
 
-
-I was building a computer vision system for fashion classification when I stumbled upon a shocking discovery: **three out of four standard optimization algorithms completely failed to learn, costing us 75% more in wasted GPU time.** While one method achieved a production-ready **85% accuracy**, the others were barely better than random guessing at 10-14%.
+I was building a computer vision system for  classification when I stumbled upon a shocking discovery: **three out of four standard optimization algorithms completely failed to learn, costing us 75% more in wasted GPU time.** While one method achieved a production-ready **85% accuracy**, the others were barely better than random guessing at 10-14%.
 
 This wasn't just an academic curiosity—it was the difference between a successful product launch and wasting **thousands of dollars** in cloud computing resources on dead-end approaches.
 
@@ -118,79 +118,6 @@ Once I identified Adam as the clear winner, I conducted sensitivity analysis to 
 ## Technical Implementation Highlights
 
 ```python
-# The winning combination: Adam + LR=0.001
-def create_optimized_model():
-    # ... CNN architecture defined here ...
-    
-    # The champion optimizer
-    model.compile(optimizer=Adam(learning_rate=0.001),
-                  loss='sparse_categorical_crossentropy',
-                  metrics=['accuracy'])
-    return model
-```
-
-## Lessons Learned for Production ML
-
-1.  **Start Simple, Then Scale:** Test fundamental algorithms before investing in complex tuning. Default settings often work remarkably well for proven methods.
-2.  **Foundation First, Fine-Tuning Second:** No amount of hyperparameter tuning can fix a fundamentally broken optimizer choice. Get the basics right before optimizing the details.
-3.  **Measure What Matters:** Track both technical metrics (accuracy) and **business metrics (compute costs)**. A "failed" experiment that saves $10,000 in cloud costs is actually a success.
-
-## Skills Demonstrated
-
-`Machine Learning` `TensorFlow` `Keras` `Experimental Design` `Computer Vision` `Hyperparameter Optimization` `Business Analytics` `Cost Optimization`
-
------
-
-**Ready to cut your AI training costs by 75%?** My approach prioritizes fundamental efficiency to deliver maximum performance with minimal waste.
-
-**[Let's connect]** and implement these resource-efficient strategies in your next machine learning project.
-
-*[View the complete technical analysis on GitHub] • [See other projects] • [Contact me]*
-
-
-
-
-
-# Problem Overview
-
-Deep learning has become a crucial component of many companies' data analysis pipelines. To further enhance the performance of deep learning models, researchers have developed various optimization algorithms. An optimizer improves the model by adjusting its parameters (weights and biases) to minimize the loss function value. Having multiple optimizers available means that different algorithms can be used to adjust the parameters to minimize the loss function value. Hence, this study provides an experiment with five optimizers to assess their performance on a neural network classifier. The following Optimizers will be used:
-- Stochastic Gradient Descent (SGD)
-- Adam
-- RMSprop
-- Adagrad
-- Nadam
-
-# Dataset
-
-In view of this, this study aims to compare how each of these optimizer perform using the MNISt dataset. I load the dataset using the below code:
-
-```python
-(X_train, y_train), (X_test, y_test) = fashion_mnist.load_data()
-```
-The dimension of the training dataset is (60000, 28, 28). In this case, I have set aside 10000 images and their corresponding as a validation set. The remaining set will be labelled as the training set.
-
-# Exploratortion
-
-A quick view of the data using the code below yields the picture below: 
-
-![Exploratory](/assets/images/mnistexploratory.png)
-
-Before I feed the images into the neural network, I normalize the pixel values by dividing them by 255. This scales all pixel values from the original range of 0–255 down to a range of 0–1. This step helps my model train faster and more effectively by keeping the input values small and consistent, which improves the stability of the learning process.
-
-```python
-def preprocess_images(images):
-    return images.reshape((-1, 28, 28, 1)) / 255.0
-
-train_images = preprocess_images(train_images)
-validation_images = preprocess_images(validation_images)
-X_test = preprocess_images(X_test)
-```
-
-![Output](/assets/images/Adams.png)
-
-The code below shows the list of the different optimizers used for this analysis. 
-
-```python
 optimizers = {
     'Adam': Adam(learning_rate=0.001),
     'SGD': SGD(learning_rate=0.001),
@@ -213,23 +140,24 @@ def create_model():
     return model
 ```
 
-The results that follow shows the output from the experiment. 
+## Lessons Learned for Production ML
 
-Optimizer Comparison: The final line compares the performance of four optimizers:
+1.  **Start Simple, Then Scale:** Test fundamental algorithms before investing in complex tuning. Default settings often work remarkably well for proven methods.
+2.  **Foundation First, Fine-Tuning Second:** No amount of hyperparameter tuning can fix a fundamentally broken optimizer choice. Get the basics right before optimizing the details.
+3.  **Measure What Matters:** Track both technical metrics (accuracy) and **business metrics (compute costs)**. A "failed" experiment that saves $10,000 in cloud costs is actually a success.
 
-- Adam: Achieved an accuracy of 0.8476
-- SGD (Stochastic Gradient Descent): Achieved an accuracy of 0.1411
-- RMSprop: Achieved an accuracy of 0.1000
-- Adagrad: Achieved an accuracy of 0.1000
+## Skills Demonstrated
 
-![Output](/assets/images/optimizercomp.png)
+`Machine Learning` `TensorFlow` `Keras` `Experimental Design` `Computer Vision` `Hyperparameter Optimization` `Business Analytics` `Cost Optimization`
 
-Based on the output, Adam seems to be the best-performing optimizer for your model, with an accuracy of 0.8476. The other optimizers (SGD, RMSprop, and Adagrad) resulted in significantly lower accuracy values. Hence the Adam will be chosen for hyperparameter tuning.
+-----
+
+**Ready to cut your AI training costs by 75%?** My approach prioritizes fundamental efficiency to deliver maximum performance with minimal waste.
+
+**[Let's connect]** and implement these resource-efficient strategies in your next machine learning project.
+
+*[View the complete technical analysis on GitHub](https://github.com/ernselito/Optimizing-Compute-Efficiency-for-Automated-Visual-Recognition/blob/master/Effect_of_Different_Optimizers_on_Classification.ipynb) • [See other projects](https://ernselito.github.io/projects/) • [Contact me](mailto:ernselito@gmail.com)*
 
 
-## 
-The results suggest that:
-- The model performs well with a learning rate of 0.001, achieving an accuracy of 0.8254.
-- The model struggles with higher learning rates (0.01 and 0.1), resulting in very poor accuracy.
 
 

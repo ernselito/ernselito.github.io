@@ -17,6 +17,8 @@ class: wide
 
 # Problem Overview
 
+[View Full Code On Github](https://github.com/ernselito/Stock-Price-Prediction-using-LSTM-Neural-Networks)
+
 Financial markets are inherently volatile and complex, making accurate stock price prediction one of the most challenging problems in data science. Traditional forecasting methods often struggle to capture the non-linear patterns and temporal dependencies present in financial time-series data. 
 Long Short-Term Memory (LSTM) neural networks, a specialized type of Recurrent Neural Network designed to recognize patterns in sequential data has proven to be one of the best models in the field of data science. LSTM is trained on historical price and volume data for three major tech stocks (AAPL, GOOGL, MSFT) to forecast future closing prices.
 

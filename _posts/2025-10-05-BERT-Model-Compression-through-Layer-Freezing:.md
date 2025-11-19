@@ -16,6 +16,9 @@ class: wide
 ---
 
 # Problem Overview
+
+[View On Google Colab](https://colab.research.google.com/drive/11jgdCPk502O6gt-Ime3criLE_1YiVgEC?usp=sharing)
+
 With the abundance of large models, businesses are faced with the challenge of computational resources, making them unable to adopt these models to their advantage. Pretrained models have already been trained, and their weights are stored; these are general models. Due to this, model compression techniques exist to solve these issues. There is a need to analyze the trade-offs between using layer freezing as a compression strategy. This study offers a comparative analysis of the effects of freezing strategies to help businesses make informed decisions when considering the trade-offs and expenditure involved.
 
 # Research Questions

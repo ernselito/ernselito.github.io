@@ -15,8 +15,9 @@ header:
 class: wide
 ---
 
-# How to Reduce 75% in AI Development Costs by Choosing the Right Optimizer
+# How to Reduce 75% in AI Development Costs by Choosing the Right Optimizer 
 -----
+[Code Link](https://github.com/ernselito/Effect-of-Different-Optimizers-on-Classification)
 
 I was building a computer vision system for  classification when I stumbled upon a shocking discovery: **three out of four standard optimization algorithms completely failed to learn, costing us 75% more in wasted GPU time.** While one method achieved a production-ready **85% accuracy**, the others were barely better than random guessing at 10-14%.
 
@@ -156,7 +157,7 @@ def create_model():
 
 **[Let's connect]** and implement these resource-efficient strategies in your next machine learning project.
 
-*[View the complete technical analysis on GitHub](https://github.com/ernselito/Optimizing-Compute-Efficiency-for-Automated-Visual-Recognition/blob/master/Effect_of_Different_Optimizers_on_Classification.ipynb) • [See other projects](https://ernselito.github.io/projects/) • [Contact me](mailto:ernselito@gmail.com)*
+*[View the complete technical analysis on GitHub](https://github.com/ernselito/Effect-of-Different-Optimizers-on-Classification) • [See other projects](https://ernselito.github.io/projects/) • [Contact me](mailto:ernselito@gmail.com)*
 
 
 

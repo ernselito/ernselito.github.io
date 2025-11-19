@@ -17,6 +17,9 @@ class: wide
 
 
 # Feature Engineering: The Secret Weapon That Decoded California Housing Prices
+
+[View Full Code On Github](https://github.com/ernselito/Impact-of-Feature-Transformation-on-Machine-Learning-)
+
 ### The Problem with Raw Data
 Accurate housing price prediction is the holy grail for real estate investors and market analysts. But here’s the secret: raw data is rarely good enough.
 

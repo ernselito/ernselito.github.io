@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Modernizing Credit Risk: A Feature Engineering Approach"
+title: "Beyond the FICO Score: A Feature Engineering Approach to Modern Credit Risk"
 excerpt: "A walkthrough Feature Engineering, and how I improved accuracy using feature engineering."
 date: 2025-11-10
 read_time: true
@@ -16,7 +16,7 @@ class: wide
 ---
 
 
-# Modernizing Credit Risk: A Feature Engineering Approach
+# Beyond the FICO Score: A Feature Engineering Approach to Modern Credit Risk
 
 **Focus:** Financial Risk Management & ML Strategy  
 **Stack:** Python, XGBoost, Pandas, Scikit-Learn

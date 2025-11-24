@@ -27,10 +27,23 @@
     </h2>
     
     {% if post.tags %}
-    <p class="page__meta" style="margin-top: 5px;">
-      <i class="fas fa-code" aria-hidden="true"></i>
+    <p class="page__meta" style="margin-top: 5px; font-size: 14px; font-family: sans-serif;">
+      <i class="fas fa-code" aria-hidden="true" style="margin-right: 5px;"></i>
       {% for tag in post.tags %}
-        <span style="background-color: #f2f3f3; color: #333; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; margin-right: 4px; border: 1px solid #ddd; font-weight: bold; cursor: default;">{{ tag }}</span>
+        <span style="
+            display: inline-block;
+            background-color: #f2f3f3; 
+            color: #444; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            font-size: 0.85em; 
+            margin-right: 5px; 
+            border: 1px solid #ddd; 
+            font-weight: 600; 
+            cursor: default; 
+            pointer-events: none;">
+          {{ tag }}
+        </span>
       {% endfor %}
     </p>
     {% endif %}

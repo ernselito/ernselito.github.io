@@ -5,10 +5,6 @@ permalink: /about/
 excerpt: "A showcase of my projects, research, and work in Machine Learning and Data Science."
 author_profile: true
 classes: wide
-header:
-  overlay_filter: 0.3
-  overlay_image: /assets/images/about.jpg
-  caption: "Exploring Machine Learning, Data Science, and Research Projects"
 ---
 
 ## 👋 Hi, I’m Ernest Essel-Kaitoo, PhD

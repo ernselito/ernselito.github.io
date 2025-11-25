@@ -25,9 +25,9 @@ Objective: Build a machine learning model that looks beyond the credit score to 
 
 Instead of feeding raw data into a model, I engineered features that mimic the logic of a human underwriter:
 
-    Payment Strain: Calculated the ratio of the new loan payment to monthly income.
+-**Payment Strain:** Calculated the ratio of the new loan payment to monthly income.
 
-    Free Cash Flow: Modeled available_income after existing debts are paid.
+-**Free Cash Flow:** Modeled available_income after existing debts are paid.
 
 I trained an XGBoost model on these engineered features using 8-Fold Stratified Cross-Validation to ensure stability across different customer segments.
 
@@ -35,15 +35,15 @@ I trained an XGBoost model on these engineered features using 8-Fold Stratified 
 
 The initial model had a high accuracy but approved too many risky loans (False Positives) because it used a standard 50% probability threshold.
 
-    The Fix: I performed Threshold Tuning, shifting the approval boundary to 65% probability.
+-**The Fix:** I performed Threshold Tuning, shifting the approval boundary to 65% probability.
 
-    The Impact: This stricter standard prioritized capital preservation. While it slightly reduced the overall approval volume, it drastically cut the number of expected defaults, directly protecting the bank's bottom line.
+-**The Impact:** This stricter standard prioritized capital preservation. While it slightly reduced the overall approval volume, it drastically cut the number of expected defaults, directly protecting the bank's bottom line.
 
 ## 4. Key Results
 
-    Performance: Achieved an ROC-AUC score of 0.893, indicating excellent discriminatory power between payers and defaulters.
+-**Performance:** Achieved an ROC-AUC score of 0.893, indicating excellent discriminatory power between payers and defaulters.
 
-    Impact: Engineered features like payment_strain consistently ranked in the top 3 predictors, proving that behavioral metrics are more predictive than demographic data.
+-**Impact:** Engineered features like payment_strain consistently ranked in the top 3 predictors, proving that behavioral metrics are more predictive than demographic data.
 
 Code snapshot below.
 

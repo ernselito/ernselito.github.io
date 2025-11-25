@@ -7,14 +7,6 @@ read_time: true
 comments: true
 share: true
 related: true
-tags: 
-  - Python
-  - PyTorch
-  - NLP
-  - BERT
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
 class: wide
 ---
 

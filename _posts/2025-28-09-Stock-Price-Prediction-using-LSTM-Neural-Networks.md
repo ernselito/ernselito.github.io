@@ -10,8 +10,6 @@ related: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: "/assets/images/ml-project-banner.jpg"
-  caption: "Exploring prediction with Random Forest"
 class: wide
 ---
 

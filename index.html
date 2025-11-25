@@ -1,17 +1,23 @@
 ---
-layout: archive
+layout: home
 author_profile: true
-image:
-  feature: all_collabs_R_.png
+classes: wide 
+header:
+  overlay_image: /assets/images/ml-project-banner.jpg
+  overlay_filter: 0.3
+  show_title: true
 ---
+<hr />
 
-{% include base_path %}
+<h2 id="explore-my-work"> Explore My Work</h2>
+<ul>
+  <li> <a href="{{ '/projects/' | relative_url }}">Projects</a> — See how I apply AI and data science to real-world problems</li>
+  <li> <a href="{{ '/about/' | relative_url }}">About Me</a> — View my background, education, and professional skills</li>
+</ul>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<hr />
 
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
-
-{% include paginator.html %}
+<blockquote>
+  <em>“Data is not just numbers — it’s a story waiting to be modeled.”</em>
+</blockquote>
 
